@@ -1,3 +1,6 @@
+import ProjectCard from "@/components/ProjectCard";
+
+
 export default function Home() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-20">
@@ -6,6 +9,31 @@ export default function Home() {
         I'm a computer science graduate based in Kenya. I build backend systems
         and APIs, and I've shipped tools that businesses use every day.
       </p>
+
+      <section className="mt-16">
+        <h2 className="text-2xl font-bold">Projects</h2>
+        <div className="mt-6 space-y-6">
+          <ProjectCard
+            title="Agrovet POS"
+            tagline="Flutter app + FastAPI backend, in daily use at a real agrovet"
+            points={[
+              "Sales automatically deduct stock; restocks and write-offs are logged as stock movements",
+              "Credit sales with part-payments and an outstanding-balances report",
+              "JWT auth with a REST API documented in Swagger",
+            ]}
+            stack="Flutter · FastAPI · PostgreSQL · Render · Neon"
+            links={[
+              {
+                label: "API docs",
+                href: "https://pointofsale-api.onrender.com/docs",
+              },
+              { label: "Backend repo", href: "https://github.com/KingN3V/PointOfSale"},
+              { label: "Mobile app repo", href:"https://github.com/KingN3V/pos_frontend"},
+            ]}
+          />
+    </div>
+  </section>
+      
     </main>
   );
 }
