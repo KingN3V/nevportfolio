@@ -1,6 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
 
-
 export default function Home() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-20">
@@ -27,13 +26,35 @@ export default function Home() {
                 label: "API docs",
                 href: "https://pointofsale-api.onrender.com/docs",
               },
-              { label: "Backend repo", href: "https://github.com/KingN3V/PointOfSale"},
-              { label: "Mobile app repo", href:"https://github.com/KingN3V/pos_frontend"},
+              {
+                label: "Backend repo",
+                href: "https://github.com/KingN3V/PointOfSale",
+              },
+              {
+                label: "Mobile app repo",
+                href: "https://github.com/KingN3V/pos_frontend",
+              },
             ]}
           />
-    </div>
-  </section>
-      
+          <ProjectCard
+            title="Kicks JJ"
+            tagline="Online shoe store with its own admin dashboard, built for a real client"
+            points={[
+              "Admin dashboard where the owner adds, edits and removes shoes, protected by JWT login",
+              "Filtering by brand, category, size and price",
+              "Orders go to the seller on WhatsApp with the shoe and size pre-filled",
+            ]}
+            stack="Next.js · FastAPI · PostgreSQL · Cloudinary · Render · Neon · Netlify"
+            links={[
+              { label: "Live site", href: "https://kicksjj.netlify.app" },
+              {
+                label: "Repo",
+                href: "https://github.com/KingN3V/kicks",
+              },
+            ]}
+          />
+        </div>
+      </section>
     </main>
   );
 }
