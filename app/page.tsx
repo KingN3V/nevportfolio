@@ -180,6 +180,9 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <footer className="mt-20 border-t border-gray-300 py-8 text-sm text-gray-500">
+        © 2026 Neville Ken. All rights reserved.
+      </footer>
     </main>
   );
 }
