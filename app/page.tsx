@@ -17,7 +17,15 @@ const skills = [
 export default function Home() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-20">
-      <h1 className="text-4xl font-bold">Neville Ken: Backend Software Engineer</h1>
+      <nav className="sticky top-0 flex gap-6 border-b border-gray-300 bg-background py-4">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <h1 className="text-4xl font-bold">
+        Neville Ken: Backend Software Engineer
+      </h1>
       <p className="mt-4 text-lg text-gray-600">
         I'm a computer science graduate based in Kenya. I build backend systems
         and APIs, and I've shipped tools that businesses use every day.
@@ -29,7 +37,7 @@ export default function Home() {
       >
         Download CV
       </a>
-      <section className="mt-16">
+      <section id="about" className="mt-16 scroll-mt-16">
         <h2 className="text-2xl font-bold">About</h2>
         <p className="mt-4 text-gray-600">
           I'm a computer science graduate who got hooked on backend engineering:
@@ -57,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16">
+      <section id="projects" className="mt-16 scroll-mt-16">
         <h2 className="text-2xl font-bold">Projects</h2>
         <div className="mt-6 space-y-6">
           <ProjectCard
@@ -103,7 +111,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="mt-16">
+      <section id="experience" className="mt-16 scroll-mt-16">
         <h2 className="text-2xl font-bold">Experience</h2>
         <div className="mt-6">
           <h3 className="text-xl font-semibold">IT Attaché</h3>
@@ -140,7 +148,7 @@ export default function Home() {
           <p className="text-gray-600">Maseno University · 2022 – 2026</p>
         </div>
       </section>
-      <section className="mt-16">
+      <section id="contact" className="mt-16 scroll-mt-16">
         <h2 className="text-2xl font-bold">Contact</h2>
         <p className="mt-4 text-gray-600">
           Looking for a software engineer? I build backend systems and full
