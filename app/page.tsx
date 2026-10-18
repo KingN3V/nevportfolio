@@ -55,6 +55,38 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className="mt-16">
+        <h2 className="text-2xl font-bold">Contact</h2>
+        <p className="mt-4 text-gray-600">
+          Looking for a software engineer? I build backend systems and full
+          applications, and I’m open to roles and
+          collaborations. Reach out to me anytime.
+        </p>
+        <div className="mt-6 flex gap-6">
+          <a
+            href="mailto:nevilleken5@gmail.com"
+            className="text-blue-600 underline"
+          >
+            Email
+          </a>
+          <a
+            href="https://github.com/KingN3V"
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-600 underline"
+          >
+            GitHub
+          </a>
+          <a
+            href="www.linkedin.com/in/neville-ken-786901262"
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-600 underline"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </section>
     </main>
   );
 }
