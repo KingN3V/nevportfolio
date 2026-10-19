@@ -17,47 +17,51 @@ const skills = [
 export default function Home() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-20">
-      <nav className="sticky top-0 flex gap-6 border-b border-gray-300 bg-background py-4">
+      <nav className="sticky top-0 z-10 flex flex-wrap gap-x-8 gap-y-2 border-b border-foreground/15 bg-background py-6 text-xs uppercase tracking-widest text-muted">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
-      <h1 className="text-4xl font-bold">
+      <h1 className="mt-24 text-5xl font-medium leading-tight sm:text-6xl">
         Neville Ken: Backend Software Engineer
       </h1>
-      <p className="mt-4 text-lg text-gray-600">
+      <p className="mt-4 text-lg text-muted">
         I'm a computer science graduate based in Kenya. I build backend systems
         and APIs, and I've shipped tools that businesses use every day.
       </p>
       <a
         href="/Neville_Ken_CV.pdf"
         download
-        className="mt-6 inline-block rounded border border-gray-400 px-4 py-2"
+        className="mt-6 inline-block rounded border border-foreground/30 px-4 py-2"
       >
         Download CV
       </a>
-      <section id="about" className="mt-16 scroll-mt-16">
-        <h2 className="text-2xl font-bold">About</h2>
-        <p className="mt-4 text-gray-600">
+      <section id="about" className="mt-24 scroll-mt-24">
+        <p className="text-xs uppercase tracking-widest text-accent">
+          Who I am
+        </p>
+        <h2 className="mt-2 text-4xl font-medium">About</h2>
+        <p className="mt-4 text-muted">
           I'm a computer science graduate who got hooked on backend engineering:
           designing APIs, modelling data, and building systems that keep working
           once real people depend on them. I enjoy taking a real business
           problem and turning it into something reliable that's deployed and in
           use.
         </p>
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-muted">
           I know the backend best, but I'm comfortable building the front end
           too, and I'm always learning more.
         </p>
       </section>
-      <section className="mt-16">
-        <h2 className="text-2xl font-bold">Skills</h2>
+      <section className="mt-24">
+        <p className="text-xs uppercase tracking-widest text-accent">Toolbox</p>
+        <h2 className="mt-2 text-4xl font-medium">Skills</h2>
         <div className="mt-4 flex flex-wrap gap-3">
           {skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-full border border-gray-400 px-4 py-1 text-sm"
+              className="rounded-full border border-foreground/30 px-4 py-1 text-sm"
             >
               {skill}
             </span>
@@ -65,8 +69,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="mt-16 scroll-mt-16">
-        <h2 className="text-2xl font-bold">Projects</h2>
+      <section id="projects" className="mt-24 scroll-mt-24">
+        <p className="text-xs uppercase tracking-widest text-accent">
+          What I've built
+        </p>
+        <h2 className="mt-2 text-4xl font-medium">Projects</h2>
         <div className="mt-6 space-y-6">
           <ProjectCard
             title="Agrovet POS"
@@ -111,11 +118,14 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="experience" className="mt-16 scroll-mt-16">
-        <h2 className="text-2xl font-bold">Experience</h2>
+      <section id="experience" className="mt-24 scroll-mt-24">
+        <p className="text-xs uppercase tracking-widest text-accent">
+          Where I've worked
+        </p>
+        <h2 className="mt-2 text-4xl font-medium">Experience</h2>
         <div className="mt-6">
-          <h3 className="text-xl font-semibold">IT Attaché</h3>
-          <p className="text-gray-600">
+          <h3 className="text-2xl font-medium">IT Attachee</h3>
+          <p className="text-muted">
             Kenya Power and Lighting Company (KPLC), Kisii · May 2025 – July
             2025
           </p>
@@ -141,24 +151,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16">
-        <h2 className="text-2xl font-bold">Education</h2>
+      <section className="mt-24">
+        <p className="text-xs uppercase tracking-widest text-accent">
+          Background
+        </p>
+        <h2 className="mt-2 text-4xl font-medium">Education</h2>
         <div className="mt-6">
-          <h3 className="text-xl font-semibold">BSc Computer Science</h3>
-          <p className="text-gray-600">Maseno University · 2022 – 2026</p>
+          <h3 className="text-2xl font-medium">BSc Computer Science</h3>
+          <p className="text-muted">Maseno University · 2022 – 2026</p>
         </div>
       </section>
-      <section id="contact" className="mt-16 scroll-mt-16">
-        <h2 className="text-2xl font-bold">Contact</h2>
-        <p className="mt-4 text-gray-600">
+      <section
+        id="contact"
+        className="mt-24 scroll-mt-24 rounded-lg bg-band p-8 text-background sm:p-12"
+      >
+        <p className="text-xs uppercase tracking-widest text-accent">
+          Get in touch
+        </p>
+        <h2 className="mt-2 text-4xl font-medium">Contact</h2>
+        <p className="mt-4 text-muted">
           Looking for a software engineer? I build backend systems and full
           applications, and I’m open to roles and collaborations. Reach out to
-          me anytime.
+          me anytime using the links below.
         </p>
         <div className="mt-6 flex gap-6">
           <a
             href="mailto:nevilleken5@gmail.com"
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             Email
           </a>
@@ -166,21 +185,21 @@ export default function Home() {
             href="https://github.com/KingN3V"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             GitHub
           </a>
           <a
-            href="www.linkedin.com/in/neville-ken-786901262"
+            href="https://www.linkedin.com/in/neville-ken-786901262"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             LinkedIn
           </a>
         </div>
       </section>
-      <footer className="mt-20 border-t border-gray-300 py-8 text-sm text-gray-500">
+      <footer className="mt-20 border-t border-foreground/15 py-8 text-sm text-muted">
         © 2026 Neville Ken. All rights reserved.
       </footer>
     </main>
