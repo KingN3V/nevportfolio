@@ -14,9 +14,16 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nevilleken.vercel.app"),
   title: "Neville Ken | Software Engineer",
   description:
-    "Software engineer building APIs and systems. Projects, experience and contact details.",
+    "Software engineer building backend systems and APIs. Projects, experience and contact details.",
+  openGraph: {
+    title: "Neville Ken | Software Engineer",
+    description:
+      "Software engineer building backend systems and APIs. Projects, experience and contact details.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
