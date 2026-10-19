@@ -14,9 +14,9 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Neville Ken | Backend Software Engineer",
+  title: "Neville Ken | Software Engineer",
   description:
-    "Backend software engineer building APIs and systems. Projects, experience and contact details.",
+    "Software engineer building APIs and systems. Projects, experience and contact details.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

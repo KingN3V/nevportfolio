@@ -25,8 +25,11 @@ export default function Home() {
         <a href="#contact">Contact</a>
       </nav>
       <h1 className="mt-24 text-5xl font-medium leading-tight sm:text-6xl">
-        Neville Ken: Backend Software Engineer
+        Neville Ken: Software Engineer
       </h1>
+      <p className="mt-4 text-xs uppercase tracking-widest text-accent">
+        Backend systems and APIs
+      </p>
       <p className="mt-4 text-lg text-muted">
         I'm a computer science graduate based in Kenya. I build backend systems
         and APIs, and I've shipped tools that businesses use every day.
@@ -51,8 +54,9 @@ export default function Home() {
           use.
         </p>
         <p className="mt-4 text-muted">
-          I know the backend best, but I'm comfortable building the front end
-          too, and I'm always learning more.
+          I like owning a project from the first idea to deployment: designing
+          the database and API, building the web or mobile interface on top, and
+          shipping it where people can use it.
         </p>
       </section>
       <section className="mt-24">
