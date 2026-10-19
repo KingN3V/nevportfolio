@@ -16,7 +16,7 @@ export default function ProjectCard({
   links,
 }: ProjectCardProps) {
   return (
-    <article className="rounded-lg border border-foreground/15 bg-white/40 p-6 sm:p-8">
+    <article className="rounded-lg border border-foreground/15 bg-foreground/5 p-6 transition-colors hover:bg-foreground/10 sm:p-8">
       <h3 className="text-3xl font-medium">{title}</h3>
       <p className="mt-2 text-muted">{tagline}</p>
       <ul className="mt-4 list-disc space-y-1 pl-5">

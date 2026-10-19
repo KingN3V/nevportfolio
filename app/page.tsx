@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 const skills = [
   "Python",
   "FastAPI",
@@ -163,38 +164,41 @@ export default function Home() {
       </section>
       <section
         id="contact"
-        className="mt-24 scroll-mt-24 rounded-lg bg-band p-8 text-background sm:p-12"
+        className="mt-24 scroll-mt-24 rounded-lg bg-accent p-8 text-background sm:p-12"
       >
-        <p className="text-xs uppercase tracking-widest text-accent">
+        <p className="text-sm font-medium uppercase tracking-widest">
           Get in touch
         </p>
         <h2 className="mt-2 text-4xl font-medium">Contact</h2>
-        <p className="mt-4 text-muted">
+        <p className="mt-4">
           Looking for a software engineer? I build backend systems and full
           applications, and I’m open to roles and collaborations. Reach out to
           me anytime using the links below.
         </p>
-        <div className="mt-6 flex gap-6">
+        <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
           <a
             href="mailto:nevilleken5@gmail.com"
-            className="text-accent underline"
+            className="inline-flex items-center gap-2 underline underline-offset-4 hover:opacity-70"
           >
+            <FaEnvelope aria-hidden="true" />
             Email
           </a>
           <a
             href="https://github.com/KingN3V"
             target="_blank"
             rel="noreferrer"
-            className="text-accent underline"
+            className="inline-flex items-center gap-2 underline underline-offset-4 hover:opacity-70"
           >
+            <FaGithub aria-hidden="true" />
             GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/neville-ken-786901262"
             target="_blank"
             rel="noreferrer"
-            className="text-accent underline"
+            className="inline-flex items-center gap-2 underline underline-offset-4 hover:opacity-70"
           >
+            <FaLinkedin aria-hidden="true" />
             LinkedIn
           </a>
         </div>
