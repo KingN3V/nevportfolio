@@ -1,4 +1,10 @@
 import ProjectCard from "@/components/ProjectCard";
+import posSale from "@/public/projects/pos-sale.jpg";
+import posProducts from "@/public/projects/pos-products.jpg";
+import posBalances from "@/public/projects/pos-outstanding-balances.jpg";
+import kicksHome from "@/public/projects/kicks-home.jpeg";
+import kicksProduct from "@/public/projects/kicks-product.jpeg";
+import kicksAdmin from "@/public/projects/kicks-admin.jpeg";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 const skills = [
   "Python",
@@ -104,6 +110,17 @@ export default function Home() {
                 href: "https://github.com/KingN3V/pos_frontend",
               },
             ]}
+            images={[
+              { src: posSale, alt: "Agrovet POS sales screen" },
+              {
+                src: posProducts,
+                alt: "Agrovet POS product list with stock levels",
+              },
+              {
+                src: posBalances,
+                alt: "Agrovet POS outstanding balances report",
+              },
+            ]}
           />
           <ProjectCard
             title="Kicks JJ"
@@ -120,6 +137,11 @@ export default function Home() {
                 label: "Repo",
                 href: "https://github.com/KingN3V/kicks",
               },
+            ]}
+            images={[
+              { src: kicksHome, alt: "Kicks JJ home page" },
+              { src: kicksProduct, alt: "Kicks JJ product page" },
+              { src: kicksAdmin, alt: "Kicks JJ admin edit screen" },
             ]}
           />
         </div>

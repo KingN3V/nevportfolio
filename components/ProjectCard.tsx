@@ -1,3 +1,8 @@
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
+
+type ProjectImage = { src: StaticImageData; alt: string };
+
 type Link = { label: string; href: string };
 
 type ProjectCardProps = {
@@ -6,6 +11,7 @@ type ProjectCardProps = {
   points: string[];
   stack: string;
   links: Link[];
+  images?: ProjectImage[];
 };
 
 export default function ProjectCard({
@@ -14,6 +20,7 @@ export default function ProjectCard({
   points,
   stack,
   links,
+  images,
 }: ProjectCardProps) {
   return (
     <article className="rounded-lg border border-foreground/15 bg-foreground/5 p-6 transition-colors hover:bg-foreground/10 sm:p-8">
@@ -24,6 +31,18 @@ export default function ProjectCard({
           <li key={point}>{point}</li>
         ))}
       </ul>
+      {images && images.length > 0 && (
+        <div className="mt-5 flex gap-3 overflow-x-auto">
+          {images.map((image) => (
+            <Image
+              key={image.alt}
+              src={image.src}
+              alt={image.alt}
+              className="h-64 w-auto shrink-0 rounded border border-foreground/15"
+            />
+          ))}
+        </div>
+      )}
       <p className="mt-5 text-xs uppercase tracking-widest text-muted">
         {stack}
       </p>
