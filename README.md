@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neville Ken | Portfolio
 
-## Getting Started
+The personal portfolio of Neville Ken, Software Engineer (backend systems and APIs). It is a single scrolling page covering background, skills, projects, experience, education and contact details, with a downloadable one-page CV.
 
-First, run the development server:
+**Live site:** https://nevilleken.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech stack
+
+| Layer | Tools |
+| --- | --- |
+| Framework | Next.js 16 (App Router, Cache Components), React 19 |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS 4, theme colours as CSS variables |
+| Icons | react-icons |
+| Fonts | Cormorant Garamond (headings), Inter (body) |
+| Linting | ESLint 9 |
+| Hosting | Vercel (a push to `main` redeploys) |
+
+## Project structure
+
+```
+app/
+  page.tsx               the whole page: sticky nav, intro, About, Skills, Projects, Experience, Education, Contact
+  layout.tsx             fonts, metadata (title, description) and the page shell
+  opengraph-image.tsx    share preview image, generated in code
+  globals.css            Tailwind import and theme colours (CSS variables)
+  icon.svg               favicon
+components/
+  ProjectCard.tsx        the card used for each project
+public/                  static files, including the CV PDF     
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running it locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You need Node.js and npm.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/KingN3V/nevportfolio.git
+cd nevportfolio
+npm install
+npm run dev
+```
 
-## Learn More
+The site is at http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
+Before pushing, check that the production build passes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design decisions
 
-## Deploy on Vercel
+- **One page, no router.** Everything is on a single scrolling page. The sticky nav uses anchor links (`#about`, `#projects`, `#experience`, `#contact`) and smooth scrolling, so there are no extra routes to maintain.
+- **Theme colours are CSS variables.** The palette is defined once in `app/globals.css` and mapped to Tailwind colour names, so changing a colour means editing one line.
+- **Fonts load through `next/font`.** Cormorant Garamond and Inter are loaded at build time and exposed as CSS variables, so the browser doesn't need to fetch them from Google at runtime.
+- **Project content lives in props.** `ProjectCard` is one reusable component, so adding a project is one more `<ProjectCard />` with its own title, points, stack and links.
+- **No backend and no contact form.** Contact is a `mailto:` link plus GitHub and LinkedIn, so there is nothing to host, secure or spam-filter.
+- **The share preview is generated in code.** `opengraph-image.tsx` builds the preview image with the same colours as the site, so there is no image file to keep in sync.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by Neville Ken ([@KingN3V](https://github.com/KingN3V)).
