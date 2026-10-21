@@ -84,9 +84,10 @@ export default function Home() {
             title="Agrovet POS"
             tagline="Flutter app + FastAPI backend, in daily use at a real agrovet"
             points={[
-              "Sales automatically deduct stock; restocks and write-offs are logged as stock movements",
-              "Credit sales with part-payments and an outstanding-balances report",
-              "JWT auth with a REST API documented in Swagger",
+              "Every stock change is logged as a movement (sale, restock, cancellation, expired, damaged), and stock can never go negative",
+              "Locks product rows while stock is checked and deducted; the order, its items, the stock change and its movement records commit in a single transaction",
+              "Price and cost are snapshotted on each order item, so later price changes never rewrite past sales or profit",
+              "Credit sales with part-payments and an outstanding-balances report; JWT auth, API documented in Swagger",
             ]}
             stack="Flutter · FastAPI · PostgreSQL · Render · Neon"
             links={[
