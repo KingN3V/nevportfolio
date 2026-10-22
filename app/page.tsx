@@ -23,14 +23,14 @@ const skills = [
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-20">
+    <main className="mx-auto max-w-3xl px-6 pb-20">
       <nav className="sticky top-0 z-10 flex flex-wrap gap-x-8 gap-y-2 border-b border-foreground/15 bg-background py-6 text-xs uppercase tracking-widest text-muted">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
-      <h1 className="mt-24 text-5xl font-medium leading-tight sm:text-6xl">
+      <h1 className="mt-12 text-5xl font-medium leading-tight sm:mt-24 sm:text-6xl">
         Neville Ken: Software Engineer
       </h1>
       <p className="mt-4 text-xs uppercase tracking-widest text-accent">
