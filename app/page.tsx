@@ -19,6 +19,8 @@ const skills = [
   "Render",
   "Neon",
   "HTML/CSS",
+  "pytest",
+  "Alembic",
 ];
 
 export default function Home() {
@@ -94,6 +96,7 @@ export default function Home() {
               "Locks product rows while stock is checked and deducted; the order, its items, the stock change and its movement records commit in a single transaction",
               "Price and cost are snapshotted on each order item, so later price changes never rewrite past sales or profit",
               "Credit sales with part-payments and an outstanding-balances report; JWT auth, API documented in Swagger",
+              "Pytest suite on a separate PostgreSQL test database, covering payments, cancellations, concurrent orders and migrations",
             ]}
             stack="Flutter · FastAPI · PostgreSQL · Render · Neon"
             links={[
